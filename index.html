@@ -5,30 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Cooperativa</title>
     
-    <!-- Favicon (icono en la pestaña) -->
-    <!-- Múltiples formatos y rutas para máxima compatibilidad -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-    
-    <!-- Fallback a Google Drive si el archivo local no está disponible -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/uc?export=download&id=1EW6qhEnl0ke1wTf_coel9k2uc3IFjzkg" onerror="this.onerror=null; this.href='favicon.png';">
-    <link rel="shortcut icon" type="image/png" href="https://drive.google.com/uc?export=download&id=1EW6qhEnl0ke1wTf_coel9k2uc3IFjzkg">
-    
-    <!-- Forzar actualización del favicon -->
-    <script>
-        // Forzar recarga del favicon
-        (function() {
-            const link = document.createElement('link');
-            link.rel = 'icon';
-            link.type = 'image/png';
-            link.href = 'favicon.png?' + new Date().getTime();
-            document.getElementsByTagName('head')[0].appendChild(link);
-        })();
-    </script>
-    
+    <!-- Favicon limpio y compatible con GitHub Pages -->
+    <!-- Asegúrate de tener favicon.png en la raíz del repositorio -->
+    <link rel="icon" href="favicon.png?v=2" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+
     <style>
         body {
             margin: 0;
@@ -81,14 +62,7 @@
         <p>Cargando Portal Cooperativa...</p>
     </div>
     
-    <!-- 
-        IMPORTANTE: Reemplaza la URL de abajo con la URL de EJECUCIÓN de tu Google Apps Script
-        Para obtenerla:
-        1. Ve a tu proyecto en Google Apps Script
-        2. Haz clic en "Desplegar" > "Nueva implementación"
-        3. Selecciona tipo "Aplicación web"
-        4. Copia la URL que termina en "/exec" (NO "/dev")
-    -->
+    <!-- IFRAME QUE CARGA TU APLICACIÓN DE GOOGLE APPS SCRIPT -->
     <iframe 
         id="app-iframe"
         src="https://script.google.com/macros/s/AKfycbypwB2enQ_ZaXdPwZk1AH6q_DhFG2_BThyK8TDHXJEh/exec"
